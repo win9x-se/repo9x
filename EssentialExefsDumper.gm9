@@ -1,6 +1,8 @@
 
 DISCLAMER: THIS IS NOT THE LATEST RELEASE OF ESSENTIALEXEFSDUMPER! THIS IS THE ORIGINAL RELEASE.
 GO TO THE RELEASE TAB FOR THE LATEST RELEASE!
+If you want to use the original release, copy all of this into a text editor and give it a .gm9 description. From there, put it into
+gm9/scripts.
 
 echo "Hello!"
 echo "This script is going dump \nessential.exefs."
