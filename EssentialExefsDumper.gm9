@@ -1,0 +1,12 @@
+echo "Hello!"
+echo "This script is going dump \nessential.exefs."
+set ERRORMSG "Alright, that's fine! \nSee you around!"
+ask "Shall we continue?"
+set ERRORMSG "It looks like an error occured. \nDM @win9x#1053 on discord with the details."
+find "S:/essential.exefs" exefs
+mkdir "0:/gm9/out/essential"
+cp $[exefs] "0:/gm9/out/essential/essential.exefs"
+echo "Success! The file can be found in \ngm9/out/essential."
+echo "This script was written by win9x."
+echo "Props to GlaZed_Belmont, aspargas2, \nand CRC gang."
+echo "Have a good one!"
