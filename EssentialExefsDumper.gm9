@@ -1,3 +1,7 @@
+
+DISCLAMER: THIS IS NOT THE LATEST RELEASE OF ESSENTIALEXEFSDUMPER! THIS IS THE ORIGINAL RELEASE.
+GO TO THE RELEASE TAB FOR THE LATEST RELEASE!
+
 echo "Hello!"
 echo "This script is going dump \nessential.exefs."
 set ERRORMSG "Alright, that's fine! \nSee you around!"
