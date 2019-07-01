@@ -1,0 +1,13 @@
+set gm9 0:/gm9/out
+echo "hi i'm gonna dump the gba bios"
+echo "make sure you have a copy of \nsuper mario bros deluxe"
+echo "alright, lets go"
+set SUCCESSMSG "it worked. bios in gm9/out"
+find A:/title/00040000/000ffa00/content/00000000.app agbbios
+imgmount $[agbbios]
+find G:/romfs/agb.bin agbbin
+mkdir "0:/gm9/out/bios"
+cp $[agbbin] "0:/gm9/out/bios/agb.bin"
+imgumount
+qr  "My Github repo" "https://github.com/win9x-se/repo9x"
+echo "thank you so much for to \nplaying my game"
