@@ -39,7 +39,7 @@ end
 echo "maybe it worked?"
 goto start
 
-@Testing_.app_mounting
+@Testing_.app_stuff
 
 if not ask -o -s "Do we continue?"
 	echo "Aborted,exiting..."
@@ -48,19 +48,22 @@ end
 
 if not dirsel -o -s "Select the game folder after $[GAMEDIR] " A:/title/00040000 GAMEDIR
 	echo "ok?"
-	goto Testing_.app_mounting
+	goto Testing_.app_stuff
 end
 
 @Testing_.app_mounting
 echo "here we go"
+
 if not dirsel -o -s "Select the folder after $[GAMEDIR]" "A:/title/00040000" TIDLOW
 	echo "this shouldn't happen!"
 	goto Testing_Leave
 end
+
 if not imgmount -o -s  A:/title/00040000/$[TIDLOW]/*0.app
 	echo "something went wrong'nwhen mounting the .app
 	goto Testing_Leave
 end
+
 echo "something happened, and it mounted"
 	goto not_sure_what_this_is
 end
