@@ -1,7 +1,7 @@
 ### Testing script 
 
 @start
-labelsel -o -s Testing_*
+labelsel -o -s "What do we do?" Testing_*
 
 @Testing_Encrypt
 
