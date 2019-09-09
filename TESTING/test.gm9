@@ -1,0 +1,28 @@
+### Testing script 
+
+labelsel -o -s Testing_*
+
+@Testing_Encrypt
+
+set DISPLAY_MODE "This might not work but it will try to make\na dummy file and inject an encrypted 16 bytes into it
+
+if not ask -o -s "Do we continue?"
+	echo "Test Aborted, exiting..."
+	goto end
+end
+
+if not mkdir "0:/gm9/testing"
+	echo "Something went wrong, exiting..."
+	goto end
+end
+
+set "0:/gm9/testing"  TESTDIR
+### if not fdummy $[TESTDIR]/
+
+
+
+
+
+
+
+@end
