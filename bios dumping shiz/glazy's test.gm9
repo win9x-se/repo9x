@@ -5,7 +5,7 @@ labelsel -o -s "What do we do?" Testing_*
 
 @Testing_Encrypt
 
-set DISPLAY_MODE "This might not work but it will try to make\na dummy file and inject an encrypted 16 bytes into it
+set DISPLAY_MODE "This might not work but it will try to make\na dummy file and inject an encrypted 16 bytes into it"
 
 if not ask -o -s "Do we continue?"
 	echo "Test Aborted, exiting..."
