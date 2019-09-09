@@ -46,7 +46,7 @@ if not ask -o -s "Do we continue?"
 	goto end
 end
 
-if not dirsel -o -s "Select your game folder" A:/titles/40000000 GAMEDIR
+if not dirsel -o -s "Select the game folder after $[GAMEDIR] " A:/title/00040000 GAMEDIR
 	echo "ok?"
 	goto Testing_.app_mounting
 end
