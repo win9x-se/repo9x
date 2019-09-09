@@ -1,5 +1,6 @@
 ### Testing script 
 
+@start
 labelsel -o -s Testing_*
 
 @Testing_Encrypt
@@ -36,8 +37,10 @@ if not fset -o -s $[TESTFILE] 180000EA040000EA4C0000EA020000EA010000EA000000EA42
 end
 
 echo "maybe it worked?"
+goto start
 
+@Testing_Leave
 
-
+echo "YEET"
 
 @end
