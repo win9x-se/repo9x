@@ -19,7 +19,7 @@ end
 
 set "0:/gm9/testing"  TESTDIR
 
-if not fdummy -o -s $[TESTDIR]/testfile.bin 26
+if not fdummy -o -s "0:/gm9/testing/testfile.bin" 26
 	echo "Something went wrong on:\nthe fdummy part\nexiting..."
 	goto end
 end
