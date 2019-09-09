@@ -39,6 +39,24 @@ end
 echo "maybe it worked?"
 goto start
 
+@Testing_.app_mounting
+
+if not ask -o -s "Do we continue?"
+	echo "Aborted,exiting..."
+	goto end
+end
+
+if not dirsel -o -s "Select your game folder" A:/titles/40000000 GAMEDIR
+	echo "ok?"
+	goto Testing_.app_mounting
+end
+
+echo "thats nice, it worked\n$[GAMEDIR]"
+
+
+
+
+
 @Testing_Leave
 
 echo "YEET"
