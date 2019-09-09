@@ -54,7 +54,7 @@ if not dirsel -o -s "Select the folder after $[GAMEDIR]" "A:/title/00040000" TID
 end
 
 if not imgmount -o -s  A:/title/00040000/$[TIDLOW]/*0.app
-	echo "something went wrong'nwhen mounting the .app
+	echo "something went wrong'nwhen mounting the .app"
 	goto Testing_Leave
 end
 
