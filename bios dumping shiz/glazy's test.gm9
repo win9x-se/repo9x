@@ -51,6 +51,21 @@ if not dirsel -o -s "Select the game folder after $[GAMEDIR] " A:/title/00040000
 	goto Testing_.app_mounting
 end
 
+@Testing_.app_mounting
+echo "here we go"
+if not dirsel -o -s "Select the folder after $[GAMEDIR]" "A:/title/00040000" TIDLOW
+	echo "this shouldn't happen!"
+	goto Testing_Leave
+end
+if not imgmount -o -s  A:/title/00040000/$[TIDLOW]/*0.app
+	echo "something went wrong'nwhen mounting the .app
+	goto Testing_Leave
+end
+echo "something happened, and it mounted"
+	goto not_sure_what_this_is
+end
+
+@not_sure_what_this_is
 echo "thats nice, it worked\n$[GAMEDIR]"
 
 
