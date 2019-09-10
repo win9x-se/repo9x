@@ -82,7 +82,7 @@ echo "Now, THIS IS THE MONADO'S POWER!"
 @Skip_useless_stuff
 if not find -o "G:/romfs/agb.bin" BIOS
 	echo "theres no bios there"
-	goto @Testing_.app_mounting
+	goto Testing_.app_mounting
 end
 
 echo "$[BIOS]"
