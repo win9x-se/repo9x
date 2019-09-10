@@ -87,7 +87,7 @@ end
 
 echo "$[BIOS]"
 
-mkdir "0:/gm9/out/GBA bios :)"
+mkdir "0:/gm9/out/GBA bios"
 # if not cp -o $[BIOS] "0:/gm9/out/GBA bios :)"
 if not cp -o $[BIOS] $[OUTPATH]/gbabios.bin
 	echo "cp failed"
