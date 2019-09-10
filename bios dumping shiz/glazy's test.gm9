@@ -66,13 +66,12 @@ if not imgmount $[APPFILE]
 end
 
 echo "something happened, and it mounted"
-	goto not_sure_what_this_is
-end
 
-@not_sure_what_this_is
 echo "thats nice, it worked\n$[GAMEPATH]"
 
 echo "Now, its Rewind Time :)"
+
+goto Skip_useless_stuff
 
 set DISPLAY_MODE $[GAMEPATH]
 
@@ -80,12 +79,15 @@ echo "Look on top screen,\nthis is what true scripting is"
 
 echo "Now, THIS IS THE MONADO'S POWER!"
 
+@Skip_useless_stuff
 if not find -o "G:/romfs/agb.bin" BIOS
 	echo "theres no bios there"
 	goto @Testing_.app_mounting
 end
 
-if not cp -o $[BIOS] $[OUTPATH]
+echo "$[BIOS]"
+
+# if not cp -o  $[OUTPATH]
 	echo "cp failed"
 	goto start
 end
