@@ -48,13 +48,20 @@ end
 
 echo "here we go"
 
-if not dirsel -o -s "Select the folder after $[GAMEDIR]" "A:/title/00040000" TIDLOW
+if not dirsel -o -s "Select the folder after $[GAMEPATH]" "A:/title/00040000" GAMEPATH
 	echo "this shouldn't happen!"
 	goto Testing_Leave
 end
 
-if not imgmount -o -s  A:/title/00040000/$[TIDLOW]/*0.app
-	echo "something went wrong'nwhen mounting the .app"
+if not find -o "$[GAMEPATH]/content/00000000.app" APPFILE
+	echo "wtf"
+	goto Testing_Leave
+end
+
+echo ".app file found"
+
+if not imgmount $[APPFILE]
+	echo "something went wrong\nwhen mounting the .app"
 	goto Testing_Leave
 end
 
@@ -63,7 +70,7 @@ echo "something happened, and it mounted"
 end
 
 @not_sure_what_this_is
-echo "thats nice, it worked\n$[GAMEDIR]"
+echo "thats nice, it worked\n$[GAMEPATH]"
 
 
 
