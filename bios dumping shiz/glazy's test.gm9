@@ -54,8 +54,8 @@ if not dirsel -o -s "Select the folder after $[GAMEPATH]" "A:/title/00040000" GA
 end
 
 if not find -o "$[GAMEPATH]/content/00000000.app" APPFILE
-	echo "wtf"
-	goto Testing_Leave
+	echo "no 00000000.app in\n$[GAMEPATH]"
+	goto Testing_.app_mounting
 end
 
 echo ".app file found"
