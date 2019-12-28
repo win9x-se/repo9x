@@ -3,42 +3,6 @@
 @start
 labelsel -o -s "What do we do?" Testing_*
 
-# @Testing_Encrypt
-
-# set DISPLAY_MODE "This might not work but it will try to make\na dummy file and inject an encrypted 16 bytes into it"
-
-# if not ask -o -s "Do we continue?"
-	echo "Test Aborted, exiting..."
-	goto end
-# end
-
-# if not mkdir -o -s "0:/gm9/testing"
-	echo "Something went wrong, exiting..."
-	goto end
-# end
-
-# set "0:/gm9/testing"  TESTDIR
-
-# if not fdummy -o -s "0:/gm9/testing/testfile.bin" 26
-	echo "Something went wrong on:\nthe fdummy part\nexiting..."
-	goto end
-# end
-
-# set $[TESTDIR]/testfile.bin TESTFILE
-
-# if not fset -o -s $[TESTFILE] 180000EA040000EA
-#	echo "ok....,exiting..."
-#	goto end
-# end
-
-# if not fset -o $[TESTFILE] 180000EA040000EA
-	echo "this didnt work then"
-	goto end
-# end
-
-# echo "maybe it worked?"
-# goto start
-
 @Testing_.app_mounting
 
 if not ask -o -s "Do we continue?"
@@ -69,17 +33,8 @@ echo "something happened, and it mounted"
 
 echo "thats nice, it worked\n$[GAMEPATH]"
 
-echo "Now, its Rewind Time :)"
-
-goto Skip_useless_stuff
-
 set DISPLAY_MODE $[GAMEPATH]
 
-echo "Look on top screen,\nthis is what true scripting is"
-
-echo "Now, THIS IS THE MONADO'S POWER!"
-
-@Skip_useless_stuff
 if not find -o "G:/romfs/agb.bin" BIOS
 	echo "theres no bios there"
 	goto Testing_.app_mounting
