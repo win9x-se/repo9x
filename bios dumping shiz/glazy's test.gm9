@@ -1,6 +1,7 @@
 ### Testing script 
 
 @start
+set PREVIEW_MODE "GBA BIOS DUMPER\NBY: Win9x\nGlazed_Belmont"
 labelsel -o -s "What do we do?" Testing_*
 
 @Testing_.app_mounting
@@ -33,7 +34,11 @@ echo "something happened, and it mounted"
 
 echo "thats nice, it worked\n$[GAMEPATH]"
 
-set DISPLAY_MODE $[GAMEPATH]
+if not find -o "G:/exefs/icon" ICON
+        echo "No icon was detected."
+end
+
+set PREVIEW_MODE $[ICON]
 
 if not find -o "G:/romfs/agb.bin" BIOS
 	echo "theres no bios there"
@@ -53,6 +58,6 @@ echo "IT SEEMED TO HAVE WORKED\nTHE BIOS IS IN\n$[OUTPATH]"
 
 @Testing_Leave
 
-echo "YEET"
+echo "Script aborting..."
 
 @end
